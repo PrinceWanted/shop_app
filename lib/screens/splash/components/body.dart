@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/constants.dart';
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 import 'package:shop_app/screens/splash/components/splash_content.dart';
 
 class Body extends StatefulWidget {
@@ -65,7 +67,9 @@ class _BodyState extends State<Body> {
                     ),
                     DefaultButton(
                       text: "Contine",
-                      // press: () {},
+                      press: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
                     ),
                     Spacer(),
                   ],
